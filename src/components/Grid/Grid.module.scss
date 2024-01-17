@@ -1,0 +1,151 @@
+@import '../../styles/breakpoints';
+
+.Grid {
+  @include medium {
+    min-height: 440px;
+  }
+  @include smallMax {
+    &.GridSmallTwoCols {
+      display: flex;
+      flex-wrap: wrap;
+      color: black;
+
+      .Cell {
+        width: 50%;
+
+        &.CellPadding {
+          &:nth-child(odd) {
+            padding-right: 10px;
+          }
+
+          &:nth-child(even) {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+    &.GridSmallFourCols {
+      display: flex;
+
+      .Cell {
+        width: 25%;
+
+        &.CellPadding {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  @include medium {
+    display: flex;
+    // flex-wrap: wrap;
+
+    &.GridMediumOneCol {
+      .Cell {
+        width: 100%;
+      }
+    }
+
+    &.GridMediumTwoCols {
+      .Cell {
+        width: 50%;
+        position: relative;
+      }
+    }
+
+    &.GridMediumFourCols {
+      .Cell {
+        width: 25%;
+      }
+    }
+
+    &.GridMediumFlip {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include xlarge {
+    justify-content: space-evenly;
+  }
+
+  &.negateCellPadding {
+    margin: -20px;
+  }
+}
+
+.Cell {
+  &.CellPadding {
+    padding: 20px;
+  }
+  @include medium {
+    &.CellMediumWidth20 {
+      width: 20% !important;
+    }
+    &.CellMediumWidth25 {
+      width: 25% !important;
+    }
+    &.CellMediumWidth33 {
+      width: calc(100% / 3) !important;
+    }
+    &.CellMediumWidth40 {
+      width: 40% !important;
+    }
+    &.CellMediumWidth60 {
+      width: 60% !important;
+    }
+    &.CellMediumWidth66 {
+      width: calc(100% / 3 * 2) !important;
+    }
+    &.CellMediumWidth75 {
+      width: 75% !important;
+    }
+  }
+  @include large {
+    &.CellLargeWidth20 {
+      width: 20% !important;
+    }
+    &.CellLargeWidth25 {
+      width: 25% !important;
+    }
+    &.CellLargeWidth33 {
+      width: calc(100% / 3) !important;
+    }
+    &.CellLargeWidth40 {
+      width: 40% !important;
+    }
+    &.CellLargeWidth60 {
+      width: 60% !important;
+    }
+    &.CellLargeWidth66 {
+      width: calc(100% / 3 * 2) !important;
+    }
+    &.CellLargeWidth75 {
+      width: 75% !important;
+    }
+  }
+  @include xlarge {
+    &.CellXlargeWidth20 {
+      width: 20% !important;
+    }
+    &.CellXlargeWidth25 {
+      width: 25% !important;
+    }
+    &.CellXlargeWidth33 {
+      width: calc(100% / 3) !important;
+    }
+    &.CellXlargeWidth40 {
+      width: 40% !important;
+    }
+    &.CellXlargeWidth60 {
+      width: 60% !important;
+    }
+    &.CellXlargeWidth66 {
+      width: calc(100% / 3 * 2) !important;
+    }
+    &.CellXlargeWidth75 {
+      width: 75% !important;
+    }
+  }
+}

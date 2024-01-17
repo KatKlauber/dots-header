@@ -1,0 +1,34 @@
+//.redDot {
+//  width: 100%;
+//  height: 100%;
+//  position: relative;
+//  padding: 0 20%;
+//  box-sizing: border-box;
+//}
+.redDot svg.circle {
+  display: block;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  circle {
+    fill: #0dfcf0;
+    width: 98%;
+    height: 98%;
+    padding: 1%;
+    margin: 1%;
+  }
+}
+.redDot.hideRedDot svg.circle {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  circle {
+    fill: transparent;
+    width: 98%;
+    height: 98%;
+    padding: 1%;
+    margin: 1%;
+  }
+}

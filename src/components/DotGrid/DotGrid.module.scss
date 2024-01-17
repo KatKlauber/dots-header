@@ -1,0 +1,60 @@
+@use '../../styles/colors';
+@import '../../styles/breakpoints';
+
+.DotGrid {
+  display: none;
+  @include smallMax {
+    display: none;
+  }
+  @include medium {
+    display: grid;
+    align-content: start;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    column-gap: 0;
+    row-gap: 3.65%;
+    @include shortScreen {
+      display: none;
+    }
+    @include large {
+      display: grid;
+      align-content: start;
+      grid-template-columns: auto auto auto auto auto auto auto auto;
+      column-gap: 0;
+      row-gap: 3.65%;
+    }
+    @include xlarge {
+      display: grid;
+      align-content: start;
+      grid-template-columns: auto auto auto auto auto auto auto auto;
+      column-gap: 0;
+      row-gap: 3.65%;
+    }
+  }
+  .redDot,
+  .blackDot {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 22%;
+  }
+  .blackDot svg.circle {
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    circle {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .blackDot svg.circle circle {
+    fill: transparent;
+  }
+  //.redDot svg.circle circle {
+  //  fill: #0dfcf0;
+  //}
+  //.redDot.hideRedDot svg.circle circle {
+  //  fill: transparent;
+  //}
+}
